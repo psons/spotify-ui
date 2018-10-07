@@ -13,12 +13,14 @@ APP_BASE_HREF
 } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
 // Album and Aritst components need to be generated
 
 // The stuff below is generated stuff, not shown in the book solution as of p205.
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule
