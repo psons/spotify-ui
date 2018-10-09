@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+/*
+ * Angular
+ */
+
+import {Component, OnInit} from '@angular/core';
 import {
   Router,
-  ActivatedRoute
+  ActivatedRoute,
 } from '@angular/router';
 
-
-
-
-
-
-
-
+/*
+ * Services
+ */
 import {SpotifyService} from '../spotify.service';
-import {getQueryPredicate} from '@angular/compiler/src/render3/view/util';
+;
 
 @Component({
   selector: 'app-search',
@@ -36,9 +36,10 @@ export class SearchComponent implements OnInit {
   }
 
   submit(query: string): void {
-    this.router.navigate(['search'], { queryParams: {query: query } })
+    this.router.navigate(['search'], { queryParams: { query: query } })
       .then(_ => this.search() );
   }
+
   search(): void {
     console.log('this.query', this.query);
     if (!this.query) {
