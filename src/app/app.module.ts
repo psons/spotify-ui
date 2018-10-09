@@ -16,6 +16,15 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 // Album and Aritst components need to be generated
 
+const routes: Routes = [
+  { path: '', redirectTo: 'search', pathMatch: 'full' },
+  { path: 'search', component: SearchComponent },
+  // { path: 'artists/:id', component: ArtistComponent },
+  // { path: 'tracks/:id', component: TrackComponent },
+  // { path: 'albums/:id', component: AlbumComponent },
+];
+
+
 // The stuff below is generated stuff, not shown in the book solution as of p205.
 @NgModule({
   declarations: [
@@ -23,7 +32,10 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
